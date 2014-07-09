@@ -4,6 +4,12 @@ class CommentsController extends AppController {
     public function index() {
         $this->set('comments', $this->Comment->find('all'));
     }
+    public function history($commercial = null) {
+        $this->set('historys', $this->Comment->find('all', array(
+    'conditions' => array(
+        'Comment.commercial' => $commercial
+    ))));
+    }
     public function view($id = null) {
         if (!$id) {
             throw new NotFoundException(__('Invalid comment'));
@@ -15,4 +21,7 @@ class CommentsController extends AppController {
         }
         $this->set('comment', $comment);
     }
+
+    
+
 }

@@ -1,6 +1,8 @@
 <!-- File: /app/View/Comments/index.ctp -->
 
-<h1>Tous les comment</h1>
+<!-- test de view-->
+
+<h1>Tous les commentaires(test)</h1>
 <table>
     <tr>
         <th>Id</th>
